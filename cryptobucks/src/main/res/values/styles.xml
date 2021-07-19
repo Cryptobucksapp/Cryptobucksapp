@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ToolbarTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Hint" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="CustomEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorWhite</item>           <!---Linea base-->
+        <item name="colorControlActivated">@color/colorWhite</item>        <!---Puntero-->
+        <item name="android:textColorHighlight">@color/colorWhite</item>   <!---Seleccion-->
+    </style>
+
+    <style name="CustomEditTextInvisibility" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorTransparent</item>           <!---Linea base-->
+        <item name="colorControlActivated">@color/colorWhite</item>        <!---Puntero-->
+        <item name="android:textColorHighlight">@color/colorWhite</item>   <!---Seleccion-->
+    </style>
+
+    <style name="DialogTheme_transparent" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@drawable/round_corners</item>
+        <!--You can set other style items also, such as animations and etc-->
+    </style>
+
+    <style name="TooltipTextAppearance">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+</resources>

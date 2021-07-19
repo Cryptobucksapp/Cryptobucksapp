@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorBlackLogin">#A90E1117</color>
+    <color name="colorTextBlack">#0E1117</color>
+    <color name="colorTurquoiseBlue">#53E7FF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlackEditText">#2D3034</color>
+    <color name="colorRed">#CF142B</color>
+    <color name="colorBlackHome">#1E2022</color>
+    <color name="colorGreen">#35A139</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackIndicator">#3F4144</color>
+    <color name="colorBlueToolbar">#3277E1</color>
+    <color name="colorGrayLine">#545557</color>
+    <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorGreenBank">#05E4AE</color>
+    <color name="colorBrightOrange">#DA7E2F</color>
+    <color name="colorBlackGray">#46484A</color>
+    <color name="colorSettlement">#07ECA9</color>
+    <color name="colorIrisBlue">#00B7C4</color>
+    <color name="colorPacificBlue">#009CCF</color>
+    <color name="colorActiveIndicator">#05E4AE</color>
+    <color name="colorRedDevice">#B94242</color>
+    <color name="colorBlueDevice">#53E7FF</color>
+    <color name="colorSunsetOrange">#F14F4F</color>
+</resources>

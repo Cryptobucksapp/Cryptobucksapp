@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.cryptobucksapp.cryptobucks.ui.mvvm.MainActivityViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackHome"
+        tools:context=".ui.merchant.MerchantSaleFragment">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_oval"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_icon_crypto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linear_text_amount"
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:padding="0dp"
+                    android:visibility="gone"
+                    android:weightSum="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView9">
+
+                    <EditText
+                        android:id="@+id/text_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.9"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/poppins_extralight"
+                        android:gravity="center"
+                        android:hint="$0.00"
+                        android:inputType="text"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="38sp"
+                        android:theme="@style/CustomEditTextInvisibility"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/base_linear_text_amount"
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:background="@color/colorWhite"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/linear_text_amount"
+                    app:layout_constraintEnd_toEndOf="@+id/linear_text_amount"
+                    app:layout_constraintStart_toStartOf="@+id/linear_text_amount"
+                    app:layout_constraintTop_toTopOf="@+id/linear_text_amount"
+                    app:layout_constraintVertical_bias="0.85" />
+
+                <LinearLayout
+                    android:id="@+id/linear_tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/linear_text_amount">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="@string/text_tax_rate"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tax_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:alpha="0.5"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="@string/text_tax"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btn_add_tax_rate"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/background_border_blue"
+                        android:fontFamily="@font/poppins_bold"
+                        android:letterSpacing="0.2"
+                        android:paddingHorizontal="30dp"
+                        android:text="@string/text_add_tax"
+                        android:textColor="@color/colorPacificBlue"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <com.cryptobucksapp.cryptobucks.utils.views.KeyBoardPayView
+                    android:id="@+id/keyBoardPayView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/linear_tax" />
+
+                <Button
+                    android:id="@+id/btn_continue"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/background_button"
+                    android:fontFamily="@font/poppins_bold"
+                    android:letterSpacing="0.2"
+                    android:paddingHorizontal="45dp"
+                    android:text="@string/text_continue"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/keyBoardPayView" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView9">
+
+                    <EditText
+                        android:id="@+id/contract_person"
+                        mutableTextWatcher="@{viewModel.contractPersonTextWatcher()}"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/background_edit_text_round"
+                        android:fontFamily="@font/poppins_light"
+                        android:hint="@string/text_contract_person"
+                        android:inputType="text"
+                        android:paddingStart="30sp"
+                        android:text="@{viewModel.contractPersonValue}"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="13sp"
+                        tools:ignore="Autofill,RtlSymmetry" />
+
+                    <EditText
+                        mutableTextWatcher="@{viewModel.emailTextWatcher()}"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/background_edit_text_round"
+                        android:fontFamily="@font/poppins_light"
+                        android:hint="@string/text_email"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="30sp"
+                        android:text="@{viewModel.emailValue}"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="13sp"
+                        tools:ignore="Autofill,RtlSymmetry" />
+
+                    <EditText
+                        mutableTextWatcher="@{viewModel.phoneNumberTextWatcher()}"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/background_edit_text_round"
+                        android:fontFamily="@font/poppins_light"
+                        android:hint="@string/text_phone_number"
+                        android:inputType="phone"
+                        android:paddingStart="30sp"
+                        android:text="@{viewModel.phoneNumberValue}"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="13sp"
+                        tools:ignore="Autofill,RtlSymmetry" />
+
+                    <EditText
+                        mutableTextWatcher="@{viewModel.noteTextWatcher()}"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/background_edit_text_round"
+                        android:fontFamily="@font/poppins_light"
+                        android:hint="@string/text_note"
+                        android:inputType="text"
+                        android:paddingStart="30sp"
+                        android:text="@{viewModel.noteValue}"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="13sp"
+                        tools:ignore="Autofill,RtlSymmetry" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:padding="0dp"
+                    android:weightSum="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                    <EditText
+                        android:id="@+id/edittext_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/poppins_extralight"
+                        android:gravity="center"
+                        android:hint="$0.00"
+                        android:inputType="text"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="38sp"
+                        android:theme="@style/CustomEditTextInvisibility"
+                        tools:ignore="Autofill,HardcodedText" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/base_linear_amount"
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:background="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="@+id/linear_amount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/linear_amount"
+                    app:layout_constraintVertical_bias="0.85" />
+
+                <View
+                    android:id="@+id/enter_amount"
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <Button
+                    android:id="@+id/btn_add_tip"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/background_border_iris"
+                    android:fontFamily="@font/poppins_bold"
+                    android:letterSpacing="0.2"
+                    android:paddingHorizontal="65dp"
+                    android:text="@string/text_add_tip"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/base_linear_amount"
+                    app:layout_constraintStart_toStartOf="@+id/base_linear_amount"
+                    app:layout_constraintTop_toBottomOf="@+id/base_linear_amount" />
+
+                <Button
+                    android:id="@+id/btn_send"
+                    style="?android:attr/borderlessButtonStyle"
+                    mutableVisibility="@{viewModel.mutableVisibilityButton}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/background_button"
+                    android:fontFamily="@font/poppins_bold"
+                    android:letterSpacing="0.2"
+                    android:onClick="@{() -> viewModel.sendMerchant()}"
+                    android:paddingHorizontal="60dp"
+                    android:text="@string/text_send"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/base_linear_amount"
+                    app:layout_constraintStart_toStartOf="@+id/base_linear_amount"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_add_tip" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            mutableVisibility="@{viewModel.mutableProgress}"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

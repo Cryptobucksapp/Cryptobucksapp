@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginVertical="20dp">
+
+            <TextView
+                android:id="@+id/btn_seven"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extralight"
+                android:text="7"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/btn_eight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extralight"
+                android:text="8"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/btn_nine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extralight"
+                android:text="9"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginVertical="20dp">
+
+            <TextView
+                android:id="@+id/btn_four"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extralight"
+                android:text="4"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/btn_five"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extralight"
+                android:text="5"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/btn_six"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extralight"
+                android:text="6"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginVertical="20dp">
+
+            <TextView
+                android:id="@+id/btn_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extralight"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/btn_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extralight"
+                android:text="2"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/btn_three"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extralight"
+                android:text="3"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginVertical="20dp">
+
+            <TextView
+                android:id="@+id/btn_point"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extralight"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/btn_zero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extralight"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/btn_delete_number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAlignment="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_feather_delete"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</merge>
+
+
+
+
+
+

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.cryptobucksapp.cryptobucks.ui.mvvm.MainActivityViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackHome"
+        tools:context=".ui.merchant.MerchantActivityFragment">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_oval"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@{viewModel.mutableStatus}"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Completed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@{viewModel.mutableID}"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="ID: ASGNJS#25" />
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="50dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@{viewModel.mutableInvoiceDate}"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    tools:text="Jan 25 · 2:30 PM" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/background_corner_invoice"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginVertical="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/text_email"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoiceEmail}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp"
+                            tools:text="ali_vest95@gmail.com" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@color/colorGrayLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginVertical="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/text_phone"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoicePhone}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp"
+                            tools:text="+2 684 642 96" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@color/colorGrayLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginVertical="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/text_note"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoiceNote}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp"
+                            tools:text="Test Run" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@color/colorGrayLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginVertical="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/text_sale_amount"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableSaleAmount}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp"
+                            tools:text="$ 20.00" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@color/colorGrayLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/text_received_crypto"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorBlackGray"
+                        android:fontFamily="@font/poppins_light"
+                        android:gravity="center"
+                        android:paddingVertical="5dp"
+                        android:text="@{viewModel.mutableReceivedCrypto}"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        tools:text="0.617949813 BTC" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/text_fiat_rate"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorBlackGray"
+                        android:fontFamily="@font/poppins_light"
+                        android:gravity="center"
+                        android:paddingVertical="5dp"
+                        android:text="@{viewModel.mutableSettledAmount}"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        tools:text="0.617949813 BTC" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/text_crypto_transaction_id"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/colorBlackGray"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_light"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="5dp"
+                        android:text="@{viewModel.mutableTransactionID}"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        tools:text="V84DS9DF8BS98FD4V9S#QD" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            mutableVisibility="@{viewModel.mutableProgress}"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

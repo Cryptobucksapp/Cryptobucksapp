@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.cryptobucksapp.cryptobucks.ui.mvvm.MainActivityViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        tools:context=".ui.merchant.InvoiceFragment">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/background_card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/contentParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_logo_crypto"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/icn_close"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@{viewModel.mutableInvoiceName}"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="20sp"
+                                tools:text="John Williams" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@{viewModel.mutableInvoicePhone}"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp"
+                                tools:text="+1 954 555 1221" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@{viewModel.mutableInvoiceEmail}"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp"
+                                tools:text="John_ment@gmail.com" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="end"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.5"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="end"
+                                android:text="@string/text_date_invoice"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="@{viewModel.mutableInvoiceDate}"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp"
+                                tools:text="20 / 02 / 2020" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="32dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:alpha="0.5"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/text_name"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoiceName}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            tools:text="Alison Harvest" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorGrayLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="32dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:alpha="0.5"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/text_email"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoiceEmail}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            tools:text="ali_vest95@gmail.com" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorGrayLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="32dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:alpha="0.5"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/text_phone"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoicePhone}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            tools:text="+2 684 642 96" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorGrayLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout11" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="32dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:alpha="0.5"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/text_notes"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoiceNote}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            tools:text="Test Run" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorGrayLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout12" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="32dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout12">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:alpha="0.5"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/text_sales"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoiceAmount}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            tools:text="150,00 USD" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout13">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:alpha="0.5"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/text_tax_amount"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoiceTaxAmount}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            tools:text="50,00 USD" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutTip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:alpha="0.5"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/text_tip_amount"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoiceTipAmount}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            tools:text="50,00 USD" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTip">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.5"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="@string/text_network_fee"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/fee_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="8dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_fee" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoiceFee}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            android:visibility="invisible"
+                            tools:text="50,00 USD" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorGrayLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFee" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFee">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:alpha="0.5"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/text_total_amount"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@{viewModel.mutableInvoiceTotalAmount}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            tools:text="200,00 USD" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_weight="1"
+                        android:alpha="0.5"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="@string/text_payment_options"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout15" />
+
+                    <com.airbnb.epoxy.EpoxyRecyclerView
+                        android:id="@+id/rv_crypto"
+                        mutableVisibility="@{viewModel.mutableVisibilityCrypto}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+                    <LinearLayout
+                        mutableVisibility="@{viewModel.mutableVisibilityAddress}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView31">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="85dp"
+                                android:layout_height="90dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/gradient_crypto"
+                                android:contentDescription="@string/app_name"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/imageView12"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView13"
+                                mutableLoadImageCrypto="@{viewModel.mutableCrypto}"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="4dp"
+                                android:backgroundTint="@color/colorWhite"
+                                android:contentDescription="@string/app_name"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/imageView12"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:background="@drawable/icn_lite" />
+
+                            <ImageView
+                                android:id="@+id/imageView12"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="8dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_close_crypto"
+                                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                                app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="32dp"
+                            android:alpha="0.5"
+                            android:fontFamily="@font/poppins_light"
+                            android:gravity="center"
+                            android:text="@string/text_transfer"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="9sp"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@{viewModel.mutableTitleAddress}"
+                            android:textColor="@color/colorWhite"
+                            tools:text="Bitcoin Address" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="25dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/background_edit_text_layout"
+                            android:backgroundTint="#303133"
+                            android:paddingVertical="8dp"
+                            android:weightSum="1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="25dp"
+                                android:layout_weight="0.9"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:paddingVertical="10dp"
+                                android:text="@{viewModel.mutableCryptoAddress}"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp"
+                                tools:text="JDNIAUFNSÑGS+D6H2+TS95+GS8EFAW" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="15dp"
+                                android:layout_weight="0.1"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_copy" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            mutableVisibility="@{viewModel.mutableVisibilityTag}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/text_web_link"
+                            android:textColor="@color/colorWhite" />
+
+                        <LinearLayout
+                            mutableVisibility="@{viewModel.mutableVisibilityTag}"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="25dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/background_edit_text_layout"
+                            android:backgroundTint="#303133"
+                            android:paddingVertical="8dp"
+                            android:weightSum="1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.9"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/poppins_light"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:paddingVertical="10dp"
+                                android:text="@{viewModel.mutableWebLink}"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp"
+                                tools:text="98" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="15dp"
+                                android:layout_weight="0.1"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_copy" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@{viewModel.mutableTransactionIDWallet}"
+                            android:textColor="@color/colorWhite"
+                            tools:text="Transaction ID: 265498" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:alpha="0.5"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/text_scan_qr"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+
+                        <ImageView
+                            android:id="@+id/qr_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="24dp"
+                            android:contentDescription="@string/app_name" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <ProgressBar
+            mutableVisibility="@{viewModel.mutableProgress}"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

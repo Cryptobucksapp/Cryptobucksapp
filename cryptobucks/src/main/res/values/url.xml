@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="base_url">https://api-dev.cryptobucksapp.com</string>
+    <string name="base_url_stg">>https://api-stg.cryptobucksapp.com</string>
+    <string name="base_url_release">>https://api.cryptobucksapp.com</string>
+    <string name="btc">tbtc</string>
+    <string name="bch">tbch</string>
+    <string name="ltc">tltc</string>
+    <string name="xrp">txrp</string>
+    <string name="eth">eth</string>
+</resources>

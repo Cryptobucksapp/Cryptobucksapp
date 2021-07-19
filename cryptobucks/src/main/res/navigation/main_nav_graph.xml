@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/merchantSaleFragment">
+
+
+    <fragment
+        android:id="@+id/merchantSaleFragment"
+        android:name="com.cryptobucksapp.cryptobucks.ui.fragments.MerchantSaleFragment"
+        android:label="fragment_merchant_sale"
+        tools:layout="@layout/fragment_merchant_sale" >
+        <action
+            android:id="@+id/action_merchantSaleFragment_to_invoiceFragment"
+            app:destination="@id/invoiceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/invoiceFragment"
+        android:name="com.cryptobucksapp.cryptobucks.ui.fragments.InvoiceFragment"
+        android:label="InvoiceFragment"
+        tools:layout="@layout/fragment_invoice">
+        <action
+            android:id="@+id/action_invoiceFragment_to_merchantActivityFragment"
+            app:destination="@id/merchantActivityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/merchantActivityFragment"
+        android:name="com.cryptobucksapp.cryptobucks.ui.fragments.MerchantActivityFragment"
+        android:label="MerchantActivityFragment"
+        tools:layout="@layout/fragment_merchant_activity"/>
+
+</navigation>
